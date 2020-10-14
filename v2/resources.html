@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="assets/css/Bootstrap-4---Photo-Gallery.css">
+    <link rel="stylesheet" href="assets/css/Community-ChatComments.css">
 </head>
 
 <body id="page-top">
@@ -26,7 +27,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
                     <li class="nav-item"></li>
                     <li class="nav-item"><a class="nav-link" href="chat.html"><i class="fas fa-comment"></i><span>Chat</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="resources.html"><i class="fas fa-address-card"></i><span>Resources</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="resources.html"><i class="fas fa-address-card"></i><span>Resources</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"></div>
             </div>
@@ -129,84 +130,67 @@
         </div>
         </nav>
         <div class="container-fluid">
-            <h3 class="text-dark mb-4">Chat</h3>
-            <div class="card shadow"></div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <ul class="list-group">
-                    <li class="list-group-item" style="margin-bottom:6px;">
-                        <div class="media">
-                            <div></div>
-                            <div class="media-body">
-                                <div class="media" style="overflow:visible;">
-                                    <div><img class="mr-3" style="width: 25px; height:25px;" src="assets/img/user-photo4.jpg"></div>
-                                    <div class="media-body" style="overflow:visible;">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <p><a href="#">Sara Doe:</a> School has really been getting to me, and I just feel overwhelmed.<br>
-<small class="text-muted">September 21, 2020 @ 10:35am </small></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item" style="margin-bottom:6px;">
-                        <div class="media">
-                            <div></div>
-                            <div class="media-body">
-                                <div class="media" style="overflow:visible;">
-                                    <div><img class="mr-3" style="width: 25px; height:25px;" src="assets/img/avatars/avatar5.jpeg"></div>
-                                    <div class="media-body" style="overflow:visible;">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <p><a href="#">John Doe:</a> Hey, you got this, it'll be okay. We are all here for you.&nbsp;<br>
-<small class="text-muted">September 21, 2020 @ 10:36am </small></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item" style="margin-bottom:6px;">
-                        <div class="media">
-                            <div></div>
-                            <div class="media-body">
-                                <div class="media" style="overflow:visible;">
-                                    <div><img class="mr-3" style="width: 25px; height:25px;" src="assets/img/avatars/avatar4.jpeg"></div>
-                                    <div class="media-body" style="overflow:visible;">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <p><a href="#">Jane Doe:</a>&nbsp;I get it, something that has been helping me is going for walks to help relieve stress.<br>
-<small class="text-muted">September 21, 2020 @ 10:37am </small></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+            <h3 class="text-dark mb-4">Resources</h3>
+            <div class="card shadow"><div class="photo-gallery">
+<div class="container-fluid">
+  <div class="px-lg-5">
+
+    <div class="row">
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+        <div class="bg-white rounded shadow-sm"><img src="assets/img/mari.jpg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="#" class="text-dark">Marijuana</a></h5>
+            <p class="small text-muted mb-0">Cannabis, also known as marijuana among other names, is a psychoactive drug from the Cannabis plant used primarily for medical or recreational purposes.</p>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"></i><span class="font-weight-bold">Learn More</span></p>
             </div>
-        </div><div style = "padding: 20px">
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <i class="fas fa-paper-plane"></i>
+          </div>
         </div>
       </div>
-      <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Enter a message">
-    </div>
+      <!-- End -->
+
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+        <div class="bg-white rounded shadow-sm"><img src="assets/img/tobacco.jpg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="#" class="text-dark">Tobacco</a></h5>
+            <p class="small text-muted mb-0">Tobacco is a plant grown for its leaves, which are dried and fermented before being put in tobacco products.</p>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+             <p class="small mb-0"></i><span class="font-weight-bold">Learn More</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End -->
+
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+        <div class="bg-white rounded shadow-sm"><img src="assets/img/cocaine.jpg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="#" class="text-dark">Cocaine</a></h5>
+            <p class="small text-muted mb-0">Cocaine, also known as coke, is a strong stimulant most frequently used as a recreational drug. It is commonly snorted, inhaled as smoke, or dissolved and injected into a vein. Mental effects may include an intense feeling of happiness, loss of contact with reality, or agitation.</p>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"></i><span class="font-weight-bold">Learn More</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End -->
+
+
+  </div>
+</div>
 </div></div>
+        </div>
+    </div>
     </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/chart.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
-    <script src="assets/js/script.min.js"></script>
+    <script src="assets/js/theme.js"></script>
 </body>
 
 </html>
