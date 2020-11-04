@@ -11,6 +11,15 @@
 	<link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
 	<link rel="stylesheet" href="assets/css/styles.min.css">
+
+	<style>
+	.comments{
+		padding:1em;
+		margin-left: 2em;
+
+	}
+
+	</style>
 </head>
 
 <body id="page-top">
@@ -25,7 +34,7 @@
 				<ul class="nav navbar-nav text-light" id="accordionSidebar">
 					<li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
 					<li class="nav-item"></li>
-					<li class="nav-item"><a class="nav-link" href="social.html"><i class="fas fa-users"></i><span>Social</span></a></li>
+					<li class="nav-item"><a class="nav-link" href="chat.html"><i class="fas fa-users"></i><span>Social</span></a></li>
 					<li class="nav-item"><a class="nav-link" href="resources.html"><i class="fas fa-address-card"></i><span>Resources</span></a></li>
 				</ul>
 				<div class="text-center d-none d-md-inline"></div>
@@ -50,6 +59,7 @@
 									</form>
 								</div>
 							</li>
+
 							<li class="nav-item dropdown no-arrow mx-1">
 								<div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="badge badge-danger badge-counter">2+</span><i class="fas fa-bell fa-fw"></i></a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-list dropdown-menu-right animated--grow-in">
@@ -86,66 +96,152 @@
 		</div>
 		</nav>
 		<div class="container-fluid">
-			<h3 class="text-dark mb-4">Resources</h3>
-			<div class="card shadow"><div class="photo-gallery">
-<div class="container-fluid">
-  <div class="px-lg-5">
-
-	<div class="row">
-	  <!-- Gallery item -->
-	  <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-		<div class="bg-white rounded shadow-sm"><img src="assets/img/mari.jpg" alt="" class="img-fluid card-img-top">
-		  <div class="p-4">
-			<h5> <a href="#" class="text-dark">Marijuana</a></h5>
-			<p class="small text-muted mb-0">Cannabis, also known as marijuana among other names, is a psychoactive drug from the Cannabis plant used primarily for medical or recreational purposes.</p>
-			<div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
-			 <a href="marijuana.html"> <p class="small mb-0"></i><span class="font-weight-bold">Learn More</span></p></a>
+			<h3 class="text-dark mb-4">Social</h3>
+			<div class="card shadow"></div>
+		</div>
+		<div class="card gedf-card">
+		   <div class="card-header">
+				<ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+					<li class="nav-item">
+						<a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">Post</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="posts-tab" data-toggle="tab" href="#games" role="tab" aria-controls="posts" aria-selected="true">Games</a>
+					</li>
+				</ul>
 			</div>
-		  </div>
-		</div>
-	  </div>
-	  <!-- End -->
+			<div class="card-body">
+				<div class="tab-content" id="myTabContent">
+					<div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
+						<div class="form-group">
+							<label class="sr-only" for="message">post</label>
+							<textarea class="form-control" id="message" rows="3" placeholder="What are you thinking?"></textarea>
+						</div>
 
-	  <!-- Gallery item -->
-	  <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-		<div class="bg-white rounded shadow-sm"><img src="assets/img/tobacco.jpg" alt="" class="img-fluid card-img-top">
-		  <div class="p-4">
-			<h5> <a href="#" class="text-dark">Tobacco</a></h5>
-			<p class="small text-muted mb-0">Tobacco is a plant grown for its leaves, which are dried and fermented before being put in tobacco products.</p>
-			<div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
-			 <p class="small mb-0"></i><span class="font-weight-bold">Learn More</span></p>
+					</div>
+				   <div class="tab-pane fade" id="games" role="tabpanel" aria-labelledby="games-tab">
+				   <a href="javascript:init()"> <img data-toggle="modal" data-target="#flappyModal" src = "assets/img/gameIcons/Flappy_Bird_icon.png"> </a>
+					<img src = "assets/img/gameIcons/pacman-icon-26.jpg.png">
+
+
+						<div class="py-4"></div>
+					</div>
+				</div>
+				<div class="btn-toolbar justify-content-between">
+					<div class="btn-group">
+						<button id ="shareBtn" type="submit" class="btn btn-primary">Share</button>
+					</div>
+				</div>
 			</div>
-		  </div>
 		</div>
-	  </div>
-	  <!-- End -->
 
-	  <!-- Gallery item -->
-	  <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
-		<div class="bg-white rounded shadow-sm"><img src="assets/img/cocaine.jpg" alt="" class="img-fluid card-img-top">
-		  <div class="p-4">
-			<h5> <a href="#" class="text-dark">Cocaine</a></h5>
-			<p class="small text-muted mb-0">Cocaine, also known as coke, is a strong stimulant most frequently used as a recreational drug. It is commonly snorted, inhaled as smoke, or dissolved and injected into a vein. Mental effects may include an intense feeling of happiness, loss of contact with reality, or agitation.</p>
-			<div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
-			  <p class="small mb-0"></i><span class="font-weight-bold">Learn More</span></p>
+<div id = "comments">
+
+
+		<div class="card gedf-card">
+			<div class="card-header">
+				<div class="d-flex justify-content-between align-items-center">
+					<div class="d-flex justify-content-between align-items-center">
+						<div class="mr-2">
+							<img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
+						</div>
+						<div class="ml-2">
+							<div class="h5 m-0">SaraDoe</div>
+						</div>
+					</div>
+					<div>
+					</div>
+				</div>
 			</div>
-		  </div>
+			<div class="card-body">
+				<div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>10 min ago</div>
+				<p class="card-text">
+					School has really been getting to me, and I just feel overwhelmed.
+				</p>
+			</div>
+			<div class="card-footer">
+				<a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
+				<a href="#" class="card-link" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-comment"></i> Comment</a>
+				<a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
+			</div>
 		</div>
-	  </div>
-	  <!-- End -->
 
 
-  </div>
-</div>
-</div></div>
-		</div>
 	</div>
+
+
+
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			  <div class="modal-content">
+				<div class="modal-header">
+					<img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
+				<strong><h5 class="modal-title" id="exampleModalLabel">SaraDoe</h5></strong>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div class="modal-body">
+					<i class="fa fa-clock-o"></i>10 min ago
+					<p class="card-text">
+						School has really been getting to me, and I just feel overwhelmed.
+					</p>
+				</div>
+				<div class="modal-footer">
+				  <input class = "bg-light form-control border-0 smallbg-light form-control border-0 small" width = "100%" type="text" placeholder="Leave a comment"><br><br><br>
+				  <div class = "comment">
+					<img class="rounded-circle" width="20" src="https://picsum.photos/50/50" alt="">&nbsp;&nbsp;&nbsp;<strong>JohnDoe</strong><p>Hey, you got this, it'll be okay. We are all here for you.</p>
+				  </div>
+				  <div class = "comment">
+					<img class="rounded-circle" width="20" src="https://picsum.photos/50/50" alt="">&nbsp;&nbsp;&nbsp;<strong>JaneDoe</strong><p>I get it, something that has been helping me is going for walks to help relieve stress.</p>
+				  </div>
+
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+
+</div></div>
 	</div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a></div>
+
+
+
+
+	<div class="modal fade" id="flappyModal" tabindex="-1" role="dialog" aria-labelledby="flappyModal" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Flappy Bird</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div onload = "init();" class="modal-body">
+				<style>
+					canvas {
+				margin-bottom: -4px;
+				max-height: 100%;
+				max-width: 100%;
+			}
+				</style>
+				<canvas id="testCanvas" width="768" height="1024"></canvas>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/js/chart.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
 	<script src="assets/js/script.min.js"></script>
+	<script src="assets/Flappy/js/flappy.js"></script>
+	<!--<script src="https://www.createjs.com/Demos/EaselJS/assets/preloadjs-NEXT.min.js"></script>-->
+	<script src="assets/Flappy/js/createjs-2013.09.25.min.js"></script>
+	<script src="assets/Flappy/js/Collisions.js"></script>
 </body>
 
 </html>
